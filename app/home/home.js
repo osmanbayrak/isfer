@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.home', ['ngRoute'])
+angular.module('myApp.home', ['ngRoute', 'ui.bootstrap'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {
@@ -9,6 +9,6 @@ angular.module('myApp.home', ['ngRoute'])
   });
 }])
 
-.controller('homeCtrl', [function() {
-
+.controller('homeCtrl', ['$scope','$rootScope','$http', '$uibModal', '$location', function($scope, $rootScope, $http, $uibModal, $location) {
+  $scope.name = "Isfer"
 }]);

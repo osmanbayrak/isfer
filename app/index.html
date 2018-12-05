@@ -1,43 +1,65 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="myApp" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <title>İsfer</title>
+  <link rel="icon" type="image/png" href="images/logo.png"/>
   <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/fonts/glyphicons-halflings-regular.svg">
+  <link rel="stylesheet" href="bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-  <ul class="menu">
-    <li><a href="#!/home">home</a></li>
-    <li><a href="#!/catalog">catalog</a></li>
-  </ul>
-
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-
+<body style="font-family: 'Bitstream Vera Sans'; font-weight: 500; background-color: whitesmoke">
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="nav" style="box-shadow: 0 8px 10px #747474; background-size: 100%; background-color: #292929">
+    <div class="navbar-header">
+      <img ng-mouseover="brighter($event)" ng-mouseleave="darker($event)" style="border-radius: 20px; cursor: pointer" width="28%" src="images/logo.png">
+    </div>
+    <div class="container-fluid col-md-offset-3 col-xs-offset-0">
+      <ul class="nav navbar-nav">
+        <li style="margin-right: 27px" class="{{currentMenu == '/home' ? 'active': undefined}}"><a href="#/home">Anasayfa </a></li>
+        <li style="margin-right: 27px;" class="dropdown {{currentMenu == '/about' || currentMenu == '/applications' || currentMenu == '/activities' ? 'active': undefined}}">
+          <a style="cursor: pointer">Kurumsal <i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#/activities">Faaliyetler</a>
+            <a href="#/applications">Uygulamalar</a>
+            <a href="#/about">Hakkımızda</a>
+          </div>
+        </li>
+        <li style="margin-right: 27px;" class="dropdown {{currentMenu.slice(0,9) == '/products' ? 'active': undefined}}">
+          <a style="cursor: pointer">Ürünler <i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#/products/yassimamuller">Yassı Mamüller</a>
+            <a href="#/products/uzunmamuller">Uzun Mamüller</a>
+            <a href="#/products/profiller">Profiller</a>
+            <a href="#/products/dekoratifdemirler">Dekoratif Demirler</a>
+          </div>
+        </li>
+        <li style="margin-right: 27px" class="{{currentMenu == '/cart' ? 'active': undefined}}"><a href="#/cart">Sepetim </a></li>
+        <li style="margin-right: 27px;" class="dropdown {{currentMenu == '/tech' ? 'active': undefined}}">
+          <a style="cursor: pointer">Teknik Bilgiler <i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#/weight-cal">Ağırlık Hesaplama</a>
+            <a href="#/quality">Kalite Belgeleri</a>
+          </div>
+        </li>
+        <li style="margin-right: 27px" class="{{currentMenu == '/contact' ? 'active': undefined}}"><a href="#/contact">İletişim </a></li>
+      </ul>
+    </div>
+  </nav>
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="home/home.js"></script>
-  <script src="catalog/catalog.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+  <script src="product/catalog.js"></script>
+  <script src="cart/cart.js"></script>
+  <script src="bootstrap/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-ui-select/dist/select.js"></script>
 </body>
 </html>

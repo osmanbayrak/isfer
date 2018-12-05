@@ -1,0 +1,18 @@
+<div class="container" style="margin-top: 100px">
+    <h1 class="text-center">{{category | uppercase}} </h1>
+    <table class="table table-hover text-center">
+        <thead>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="items in products">
+                <td ng-repeat="item in items">
+                    <img style="filter: brightness(85%)" ng-mouseover="brighter($event)" ng-mouseleave="darker($event)" height="250" width="270" src="../images/{{item.img}}">
+                    <p>{{item.weight}} {{item.name}}</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
