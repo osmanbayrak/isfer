@@ -11,6 +11,7 @@
     "angular-loader": "~1.5.0",
     "angular-mocks": "~1.5.0",
     "angular-bootstrap": "2.5.0",
-    "angular-ui-select": "0.19.8"
+    "angular-ui-select": "0.19.8",
+    "angular-ui-carousel": "^0.1.10"
   }
 }

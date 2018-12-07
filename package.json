@@ -18,5 +18,7 @@
   "scripts": {
     "start": "http-server -a localhost -p 4444 -c-1 ./app"
   },
-  "dependencies": {}
+  "dependencies": {
+    "angular-ui-carousel": "^0.1.10"
+  }
 }

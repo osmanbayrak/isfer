@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/css/bootstrap-theme.css">
   <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/fonts/glyphicons-halflings-regular.svg">
   <link rel="stylesheet" href="bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/angular-ui-carousel/dist/ui-carousel.min.css">
 </head>
-<body style="font-family: 'Bitstream Vera Sans'; font-weight: 500; background-color: whitesmoke">
-  <nav class="navbar navbar-inverse navbar-fixed-top" id="nav" style="box-shadow: 0 8px 10px #747474; background-size: 100%; background-color: #292929">
-    <div class="navbar-header">
-      <img ng-mouseover="brighter($event)" ng-mouseleave="darker($event)" style="border-radius: 20px; cursor: pointer" width="28%" src="images/logo.png">
+<body style="font-family: 'Bitstream Vera Sans'; font-weight: 500; background-color: whitesmoke; font-size: small">
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="nav" style="box-shadow: 0 8px 10px #747474; background-color: #292929;">
+    <div style="width: 8%;margin-bottom: -56px">
+      <img ng-mouseover="brighter($event)" ng-mouseleave="darker($event)" style="cursor: pointer" width="90%" src="images/logo.png">
     </div>
     <div class="container-fluid col-md-offset-3 col-xs-offset-0">
       <ul class="nav navbar-nav">
@@ -30,10 +31,10 @@
         <li style="margin-right: 27px;" class="dropdown {{currentMenu.slice(0,9) == '/products' ? 'active': undefined}}">
           <a style="cursor: pointer">Ürünler <i class="fa fa-caret-down"></i></a>
           <div class="dropdown-content">
-            <a href="#/products/yassimamuller">Yassı Mamüller</a>
-            <a href="#/products/uzunmamuller">Uzun Mamüller</a>
-            <a href="#/products/profiller">Profiller</a>
-            <a href="#/products/dekoratifdemirler">Dekoratif Demirler</a>
+            <a href="#/products/yassimamuller/shr">Yassı Mamüller</a>
+            <a href="#/products/uzunmamuller/shr">Uzun Mamüller</a>
+            <a href="#/products/profiller/shr">Profiller</a>
+            <a href="#/products/dekoratifdemirler/shr">Dekoratif Demirler</a>
           </div>
         </li>
         <li style="margin-right: 27px" class="{{currentMenu == '/cart' ? 'active': undefined}}"><a href="#/cart">Sepetim </a></li>
@@ -61,5 +62,6 @@
   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="bower_components/angular-ui-select/dist/select.js"></script>
+  <script src="bower_components/angular-ui-carousel/dist/ui-carousel.min.js"></script>
 </body>
 </html>

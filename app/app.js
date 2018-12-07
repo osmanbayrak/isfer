@@ -6,7 +6,8 @@ angular.module('myApp', [
   'myApp.catalog',
   'myApp.cart',
   'ui.select',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ui.carousel'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
