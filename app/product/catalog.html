@@ -1,29 +1,29 @@
-<div class="col-md-12" style="margin-top: -28px; border-bottom: solid 3px #616b7e">
+<div class="col-md-12 topimg">
     <img src="images/all2.jpg" width="100%" height="330vh">
 </div>
-<div class="container" style="height: 100%;border-right: solid 1px #616b7e; border-left: solid 1px #616b7e; background-color: #efefef;box-shadow: 0 10px 5px #747474;">
+<div class="container contain">
     <div style="margin-top: 10px" class="col-md-3 col-xs-3">
-        <h4 style="font-weight: 600" class="col-md-offset-1"> Yassı Mamüller</h4>
-        <ul class="pull-left list-group">
-            <li ng-repeat="(k,v) in product" class="list-group-item {{k == 'shr' ? 'active': undefined}}" ng-click="selectProduct(k)">
-                {{v.name}}<i class="fa fa-caret-right pull-right"></i>
+        <h4 style="font-weight: 600" class="col-md-offset-1">{{ category | translate }}</h4>
+        <ul class="pull-left list-group" style="width: 250px">
+            <li ng-repeat="(k,v) in product" class="list-group-item {{k === activeProduct.short ? 'active': undefined}}" ng-click="selectProduct(k)">
+                {{v.short | translate}}<i class="fa fa-caret-right pull-right"></i>
             </li>
         </ul>
     </div>
-    <div class="col-md-9 col-xs-8 col-md-offset-0 col-xs-offset-1" style="padding-top: 40px; padding-left: 10px; padding-right: 10px; border-right: double 1px #c1d1e2; border-left: double 1px #c1d1e2; background-color: whitesmoke; box-shadow: 0 2px 5px #747474;">
+    <div class="col-md-9 col-xs-8 col-md-offset-0 col-xs-offset-1" style="z-index: 5;padding-top: 40px; padding-left: 10px; padding-right: 10px; border-right: double 1px #c1d1e2; border-left: double 1px #c1d1e2; background-color: whitesmoke; box-shadow: 0 2px 5px #747474;">
         <div style="padding: 2px; border: solid 2px steelblue; border-radius: 7px" class="col-md-4">
             <img class="pull-left" style="border: double #4b4b4b 2px; border-radius: 7px" width="100%" src="{{activeProduct.img1}}">
         </div>
-        <h4 class="col-md-6 col-md-offset-1 col-xs-10"><b>{{activeProduct.name}}</b></h4>
+        <h4 class="col-md-6 col-md-offset-1 col-xs-10"><b>{{activeProduct.short | translate}}</b></h4>
         <p class="col-md-6 col-md-offset-1 col-xs-10">
-            {{activeProduct.description}}
+            <b>{{ activeProduct.short | translate}};</b> {{activeProduct.description | translate}}
         </p>
         <div style="padding: 2px; border: solid 2px steelblue; border-radius: 7px" class="col-md-4">
             <img class="pull-left" style="border: double #4b4b4b 2px; border-radius: 7px" width="100%" src="{{activeProduct.img2}}">
         </div>
         <h4 class="col-md-7 col-md-offset-1 pull-left col-xs-10"><b>Kullanım Alanları</b></h4>
         <p class="col-md-6 col-md-offset-1 col-xs-10">
-            {{ activeProduct.usage }}
+            {{ activeProduct.usage | translate}}
         </p>
     </div>
 </div>

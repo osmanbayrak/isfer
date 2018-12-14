@@ -24,6 +24,55 @@
   padding-right: 0.3em;
 }
 
+.search-div {
+  display: inline;
+  margin-top: 20px;float: right;
+  border-radius: 4px;
+}
+
+.search-icon-div {
+  display: inline;
+  margin-top: 20px;float: right;
+  background-image:linear-gradient(to bottom, #8c8c8c, #f9f7e8);
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.search-icon-div:hover {
+  filter: brightness(115%)
+}
+
+.input {
+  width: 180px;
+  height: 28px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.style {
+  margin-left: 5px;
+  margin-right: 10px;
+  color: #000000;
+}
+
+.language-div {
+  display:inline;
+  height: 28px;
+  width: 30px;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 10px;
+  float: right;
+  font-size: 13px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.language-div:hover {
+  filter: brightness(120%)
+}
+
 .onthis {
   background-color: #ffc11a;
 }
@@ -70,8 +119,8 @@
 
 .slides {
   padding: 0;
-  width: 100vh;
-  height: 100vh;
+  width: 100%;
+  height: 560px;
   display: block;
   margin: 0 auto;
   position: relative;
@@ -95,7 +144,7 @@
   top: 0;
   opacity: 0;
   width: 100%;
-  height: 100%;
+  height: 560px;
   display: block;
   position: absolute;
 
@@ -106,7 +155,7 @@
 
 .slide img {
   width: 100%;
-  height: 100%;
+  height: 560px;
 }
 
 .nav label {
@@ -132,7 +181,7 @@
 
 .nav label:hover { opacity: 1; }
 
-.nav .next { right: 70px; }
+.nav .next { right: 50px; }
 
 input:checked + .slide-container  .slide {
   opacity: 1;
@@ -167,6 +216,7 @@ input:checked + .slide-container .nav label { display: block; }
 .nav-dots .nav-dot:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
+  filter: brightness(140%)
 }
 
 input#img-1:checked ~ .nav-dots label#img-dot-1,
@@ -246,4 +296,17 @@ footer {
 
 .bottom-div:hover {
   background-color: #f0e9dc;
+}
+
+.contain {
+  height: 100%;
+  border-right: solid 1px #616b7e;
+  border-left: solid 1px #616b7e;
+  background-color: #efefef;
+  box-shadow: 0 10px 5px #747474;
+}
+
+.topimg {
+  margin-top: -28px;
+  border-bottom: solid 3px #616b7e
 }

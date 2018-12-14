@@ -1,0 +1,19 @@
+<div class="col-md-12" style="margin-top: 69px; border-bottom: solid 3px #616b7e">
+    <img src="images/kurumsal_1.jpg" width="100%" height="230vh">
+</div>
+<div class="container contain">
+    <div style="margin-top: 10px" class="col-md-3 col-xs-3">
+        <h4 style="font-weight: 600" class="col-md-offset-1">{{ 'corporate' | translate }}</h4>
+        <ul class="pull-left list-group" style="width: 250px">
+            <li ng-repeat="(k,v) in options" class="list-group-item {{k === page ? 'active': undefined}}" ng-click="changePage(k)">
+                {{v.name | translate}}<i class="fa fa-caret-right pull-right"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9 col-xs-8 col-md-offset-0 col-xs-offset-1" style="z-index: 5;padding-top: 40px; padding-left: 10px; padding-right: 10px; border-right: double 1px #c1d1e2; border-left: double 1px #c1d1e2; background-color: whitesmoke; box-shadow: 0 2px 5px #747474;">
+        <h4 class="col-md-6 col-md-offset-1 col-xs-10"><b>{{activeItem.name | translate}}</b></h4>
+        <p class="col-md-9 col-md-offset-1 col-xs-10">
+            <b>{{ activeItem.name | translate}};</b> {{ activeItem.description | translate}}
+        </p>
+    </div>
+</div>

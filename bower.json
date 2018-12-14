@@ -13,5 +13,8 @@
     "angular-bootstrap": "2.5.0",
     "angular-ui-select": "0.19.8",
     "angular-ui-carousel": "^0.1.10"
+  },
+  "devDependencies": {
+    "angular-translate": "^2.18.1"
   }
 }

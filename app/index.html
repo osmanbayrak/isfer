@@ -17,36 +17,47 @@
     <div style="width: 8%;margin-bottom: -56px">
       <img ng-mouseover="brighter($event)" ng-mouseleave="darker($event)" style="cursor: pointer" width="90%" src="images/logo.png">
     </div>
-    <div class="container-fluid col-md-offset-3 col-xs-offset-0">
+    <div class="container-fluid col-md-offset-2 col-xs-offset-0">
       <ul class="nav navbar-nav">
-        <li style="margin-right: 27px" class="{{currentMenu == '/home' ? 'active': undefined}}"><a href="#/home">Anasayfa </a></li>
+        <li style="margin-right: 27px" class="{{currentMenu == '/home' ? 'active': undefined}}"><a href="#/home">{{ 'home' | translate}} </a></li>
         <li style="margin-right: 27px;" class="dropdown {{currentMenu == '/about' || currentMenu == '/applications' || currentMenu == '/activities' ? 'active': undefined}}">
-          <a style="cursor: pointer">Kurumsal <i class="fa fa-caret-down"></i></a>
+          <a style="cursor: pointer"> {{ 'corporate' | translate}} <i class="fa fa-caret-down"></i></a>
           <div class="dropdown-content">
-            <a href="#/activities">Faaliyetler</a>
-            <a href="#/applications">Uygulamalar</a>
-            <a href="#/about">Hakkımızda</a>
+            <a href="#/corporate/activities">{{ 'activities' | translate }}</a>
+            <a href="#/corporate/applications">{{ 'applications' | translate }}</a>
+            <a href="#/corporate/about">{{ 'about' | translate }}</a>
           </div>
         </li>
         <li style="margin-right: 27px;" class="dropdown {{currentMenu.slice(0,9) == '/products' ? 'active': undefined}}">
-          <a style="cursor: pointer">Ürünler <i class="fa fa-caret-down"></i></a>
+          <a style="cursor: pointer">{{ 'products' | translate}} <i class="fa fa-caret-down"></i></a>
           <div class="dropdown-content">
-            <a href="#/products/yassimamuller/shr">Yassı Mamüller</a>
-            <a href="#/products/uzunmamuller/shr">Uzun Mamüller</a>
-            <a href="#/products/profiller/shr">Profiller</a>
-            <a href="#/products/dekoratifdemirler/shr">Dekoratif Demirler</a>
+            <a href="#/products/flat_products/shr">{{ 'flat_products' | translate}}</a>
+            <a href="#/products/long_products/shr">{{ 'long_products' | translate}}</a>
+            <a href="#/products/profiles/shr">{{ 'profiles' | translate}}</a>
+            <a href="#/products/decorative_irons/shr">{{ 'decorative_irons' | translate}}</a>
           </div>
         </li>
-        <li style="margin-right: 27px" class="{{currentMenu == '/cart' ? 'active': undefined}}"><a href="#/cart">Sepetim </a></li>
+        <li style="margin-right: 27px" class="{{currentMenu == '/cart' ? 'active': undefined}}"><a href="#/cart">{{ 'my_cart' | translate}} </a></li>
         <li style="margin-right: 27px;" class="dropdown {{currentMenu == '/tech' ? 'active': undefined}}">
-          <a style="cursor: pointer">Teknik Bilgiler <i class="fa fa-caret-down"></i></a>
+          <a style="cursor: pointer">{{ 'tech_info' | translate}} <i class="fa fa-caret-down"></i></a>
           <div class="dropdown-content">
-            <a href="#/weight-cal">Ağırlık Hesaplama</a>
-            <a href="#/quality">Kalite Belgeleri</a>
+            <a href="#/weight-cal">{{ 'weight_cal' | translate}}</a>
+            <a href="#/quality">{{ 'quality_certificates' | translate}}</a>
           </div>
         </li>
-        <li style="margin-right: 27px" class="{{currentMenu == '/contact' ? 'active': undefined}}"><a href="#/contact">İletişim </a></li>
+        <li style="margin-right: 27px" class="{{currentMenu == '/contact' ? 'active': undefined}}"><a href="#/contact">{{ 'contact' | translate}} </a></li>
       </ul>
+      <div class="search-icon-div">
+        <i ng-click="search(key)" class="fa fa-search style"></i>
+      </div>
+      <div class="search-div">
+        <input class="input" placeholder="{{ 'search' | translate}}" ng-model="searchWord">
+      </div>
+      <div class="language-div" ng-click="changeLanguage()">
+        <div style="color: #000000; font-weight: bold; width: 100%">
+          <img src="images/{{activeLang}}_flag.png" width="100%">
+        </div>
+      </div>
     </div>
   </nav>
   <div ng-view></div>
@@ -57,11 +68,14 @@
   <script src="app.js"></script>
   <script src="home/home.js"></script>
   <script src="product/catalog.js"></script>
+  <script src="corporate/corporate.js"></script>
   <script src="cart/cart.js"></script>
+  <script src="i18n.js"></script>
   <script src="bootstrap/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="bower_components/angular-ui-select/dist/select.js"></script>
   <script src="bower_components/angular-ui-carousel/dist/ui-carousel.min.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.js"></script>
 </body>
 </html>

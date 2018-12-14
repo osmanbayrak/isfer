@@ -1,9 +1,9 @@
 <div class="row" style="margin-left: 0;">
-    <ul class="slides col-md-12 col-xs-12" style="height: 80vh;margin-top: 70px">
+    <ul class="slides col-md-12 col-xs-12" style="margin-top: 70px">
         <div ng-repeat="item in slide">
             <input type="radio" name="radio-btn" id="{{item.id}}" checked />
             <li class="slide-container">
-                <div class="slide" style="width: 100%">
+                <div class="slide">
                     <img src="{{item.img}}" />
                 </div>
                 <div class="nav">
@@ -26,15 +26,15 @@
 
 <div class="row" style="margin-top: 40px;margin-left: 2px">
     <div class="col-md-12 text-center">
-        <h2>Ürün Grupları</h2>
+        <h2>{{ 'product_groups' | translate}}</h2>
         <hr class="hr">
     </div>
-    <div class="col-md-3 bottom-div" ng-repeat="item in bottomMenu">
+    <div class="col-md-3 bottom-div" ng-repeat="item in bottomMenu" ng-click="openWindow('/products/'+item.title+'/shr')">
         <img src="{{item.img}}" class="bottom-img">
         <div class="bottom-menu">
-            <h4>{{item.title}}</h4>
+            <h4>{{item.title | translate}}</h4>
             <p>
-                {{item.content}}
+                {{item.content | translate}}
             </p>
         </div>
     </div>
