@@ -4,7 +4,7 @@ angular.module('myApp.catalogDetail', ['ngRoute', 'ui.bootstrap'])
 
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/catalog/detail/:id', {
-        templateUrl: 'catalog/detail.html',
+        templateUrl: '/views/catalog/detail.html',
         controller: 'catalogDetailCtrl'
     });
 }])

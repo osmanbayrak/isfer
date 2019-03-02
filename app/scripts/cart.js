@@ -4,7 +4,7 @@ angular.module('myApp.cart', ['ngRoute', 'ui.bootstrap'])
 
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/cart', {
-        templateUrl: 'cart/cart.html',
+        templateUrl: '/views/cart/cart.html',
         controller: 'cartCtrl'
     });
 }])

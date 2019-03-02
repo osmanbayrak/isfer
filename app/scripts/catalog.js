@@ -4,7 +4,7 @@ angular.module('myApp.catalog', ['ngRoute', 'ui.bootstrap'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/products/:category/:active', {
-    templateUrl: 'product/catalog.html',
+    templateUrl: '/views/product/catalog.html',
     controller: 'catalogCtrl'
   });
 }])

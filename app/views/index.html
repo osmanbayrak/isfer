@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>İsfer</title>
-  <link rel="icon" type="image/png" href="images/logo.png"/>
-  <link rel="stylesheet" href="app.css">
-  <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7/dist/fonts/glyphicons-halflings-regular.svg">
-  <link rel="stylesheet" href="bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="bower_components/angular-ui-carousel/dist/ui-carousel.min.css">
+  <link rel="icon" type="../image/png" href="../images/logo.png"/>
+  <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" href="../bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../bootstrap/bootstrap-3.3.7/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="../bootstrap/bootstrap-3.3.7/dist/fonts/glyphicons-halflings-regular.svg">
+  <link rel="stylesheet" href="../bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../bower_components/angular-ui-carousel/dist/ui-carousel.min.css">
 </head>
 <body style="font-family: 'Bitstream Vera Sans'; font-weight: 500; background-color: whitesmoke; font-size: small">
   <nav class="navbar navbar-inverse navbar-fixed-top" id="nav" style="box-shadow: 0 8px 10px #747474; background-color: #292929;">
     <div style="width: 8%;margin-bottom: -56px">
-      <img ng-mouseover="brighter($event)" ng-mouseleave="darker($event)" style="cursor: pointer" width="90%" src="images/logo.png">
+      <img ng-mouseover="brighter($event)" ng-mouseleave="darker($event)" style="cursor: pointer" width="90%" src="../images/logo.png">
     </div>
     <div class="container-fluid col-md-offset-2 col-xs-offset-0">
       <ul class="nav navbar-nav">
@@ -55,7 +55,7 @@
       </div>
       <div class="language-div" ng-click="changeLanguage()">
         <div style="color: #000000; font-weight: bold; width: 100%">
-          <img src="images/{{activeLang}}_flag.png" width="100%">
+          <img src="../images/{{activeLang}}_flag.png" width="100%">
         </div>
       </div>
     </div>
@@ -63,19 +63,19 @@
   <div ng-view></div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="home/home.js"></script>
-  <script src="product/catalog.js"></script>
-  <script src="corporate/corporate.js"></script>
-  <script src="cart/cart.js"></script>
-  <script src="i18n.js"></script>
-  <script src="bootstrap/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="bower_components/angular-ui-select/dist/select.js"></script>
-  <script src="bower_components/angular-ui-carousel/dist/ui-carousel.min.js"></script>
-  <script src="bower_components/angular-translate/angular-translate.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../scripts/home/home.js"></script>
+  <script src="../scripts/product/catalog.js"></script>
+  <script src="../scripts/corporate/corporate.js"></script>
+  <script src="../scripts/cart/cart.js"></script>
+  <script src="../scripts/i18n.js"></script>
+  <script src="../bootstrap/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="../bower_components/angular-ui-select/dist/select.js"></script>
+  <script src="../bower_components/angular-ui-carousel/dist/ui-carousel.min.js"></script>
+  <script src="../bower_components/angular-translate/angular-translate.js"></script>
 </body>
 </html>

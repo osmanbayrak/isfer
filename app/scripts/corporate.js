@@ -4,7 +4,7 @@ angular.module('myApp.corporate', ['ngRoute', 'ui.bootstrap'])
 
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/corporate/:page', {
-        templateUrl: 'corporate/corporate.html',
+        templateUrl: '/views/corporate/corporate.html',
         controller: 'corporateCtrl'
     });
 }])
